@@ -7,7 +7,6 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 
 public class SetUp {
-
     public static void main(String[] argv) throws IOException {
         if(argv.length == 0){
             setBasicConfigPath("");
@@ -49,7 +48,7 @@ public class SetUp {
         if(path.startsWith(".")) {
             Basic.CONFIG_PATH = Path.transferPath(Path.getPath() + path.substring(1));
         }
-        else if(path.equals("")){
+        else if(path.isEmpty()){
             Basic.CONFIG_PATH = Path.transferPath(Path.getPath());
         }
         else {
@@ -61,7 +60,7 @@ public class SetUp {
         if(path.startsWith(".")) {
             Basic.SCRIPT_PATH = Path.transferPath(Path.getPath() + path.substring(1));
         }
-        else if(path.equals("")){
+        else if(path.isEmpty()){
             Basic.SCRIPT_PATH = Path.transferPath(Path.getPath());
         }
         else {
